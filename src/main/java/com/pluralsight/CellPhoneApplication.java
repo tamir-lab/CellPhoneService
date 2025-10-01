@@ -41,7 +41,28 @@ public class CellPhoneApplication {
         System.out.println("Phone number: " + number1);
         System.out.println("Owner: " + owner1);
 
+        CellPhone phone2 = new CellPhone();
+
+        phone2.setSerialNumber(3184);
+        phone2.setModel("Samsung");
+        phone2.setCarrier("T-Mobile");
+        phone2.setPhoneNumber("384533518");
+        phone2.setOwner("Dolores Sholz");
+
+        display(phoneNew);
+        display(phone2);
+        phoneNew.dial( phone2.getPhoneNumber() );
+        phone2.dial( phoneNew.getPhoneNumber() );
+
         scanner.close();
 
+    }
+    public static void display(CellPhone phone) {
+        System.out.println("Serial number: " + phone.getSerialNumber());
+        System.out.println("Model: " + phone.getModel());
+        System.out.println("Carrier: " + phone.getCarrier());
+        System.out.println("Phone number: " + phone.getPhoneNumber());
+        System.out.println("Owner: " + phone.getOwner());
+        System.out.println();
     }
 }
