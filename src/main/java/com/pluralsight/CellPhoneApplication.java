@@ -57,6 +57,7 @@ public class CellPhoneApplication {
         scanner.close();
 
     }
+
     public static void display(CellPhone phone) {
         System.out.println("Serial number: " + phone.getSerialNumber());
         System.out.println("Model: " + phone.getModel());
